@@ -1,0 +1,40 @@
+id: codex
+name: codex
+
+type: coding-agent
+
+invoke:
+  script: invoke.ps1
+
+supported_modes:
+  - execute
+  - review
+  - analyze
+
+capabilities:
+  filesystem_read: true
+  filesystem_write: true
+  shell: true
+  git: true
+  network: unknown
+
+input:
+  task_file: true
+  stdin: true
+
+output:
+  output_file: true
+  structured_output: true
+
+execution:
+  non_interactive: true
+  workspace_supported: true
+
+requirements:
+  - OpenAI Codex CLI 0.145.0 or compatible version providing codex exec
+  - Codex CLI authentication via saved login or an explicitly supplied API credential
+
+notes:
+  - execute uses the workspace-write sandbox; review and analyze use the read-only sandbox.
+  - network access is not enabled by this wrapper and depends on the local Codex configuration.
+  - The wrapper passes --skip-git-repo-check so the supplied workspace does not have to be a Git repository.

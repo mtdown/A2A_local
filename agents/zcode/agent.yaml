@@ -1,0 +1,52 @@
+id: zcode
+name: zcode
+
+type: coding-agent
+
+invoke:
+  script: invoke.ps1
+
+supported_modes:
+  - execute
+  - review
+  - analyze
+
+capabilities:
+  filesystem_read: true
+  filesystem_write: true
+  shell: true
+  git: true
+  network: true            # agent can call web/fetch tools and use shell network commands
+
+input:
+  task_file: true          # read by invoke.ps1 and inlined into --prompt, or passed via --attach when very long
+  stdin: false             # native CLI does not accept prompt from stdin (verified)
+
+output:
+  output_file: true        # always written by invoke.ps1, including on failure
+  structured_output: false # agent replies are free-form text; report headings are requested via prompt wrapper
+
+execution:
+  non_interactive: true    # headless via --prompt; requires one-time model configuration (see notes)
+  workspace_supported: true # native --cwd flag
+
+requirements:
+  - Windows with PowerShell 5.1+
+  - ZCode desktop installed (CLI core at C:\Program Files\ZCode\resources\glm\zcode.cjs, version 0.16.5)
+  - Node.js on PATH (tested with v24.15.0)
+  - One-time headless authorization, either:
+      a) `node "C:\Program Files\ZCode\resources\glm\zcode.cjs" login` run once in a terminal, or
+      b) a Z.AI Coding Plan API key (format id.secret) saved to api-key.txt next to invoke.ps1
+
+notes:
+  - Headless CLI does NOT reuse the ZCode desktop app's shared OAuth login; an API-key-backed
+    model config is mandatory (verified: runtime errors with "Model provider is missing an API key").
+  - invoke.ps1 never modifies global config or user credentials. In API-key mode it runs the CLI
+    with USERPROFILE redirected to ./home (isolated config sandbox).
+  - execute mode maps to CLI permission mode "yolo"; review/analyze map to "plan" plus an
+    explicit read-only instruction wrapper in the prompt.
+  - Default model id: zai/GLM-5.3-Flash (override with environment variable ZCODE_A2A_MODEL).
+  - Very long TaskFiles (> ~26k chars) are delivered via --attach instead of inlining into --prompt
+    to stay under the Windows command-line length limit.
+  - No fixed role is assigned to this agent; brain/executor/reviewer/analyzer roles are decided
+    per task by the caller.

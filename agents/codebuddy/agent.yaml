@@ -1,0 +1,73 @@
+id: codebuddy
+name: codebuddy
+
+display_name: CodeBuddy Code (WorkBuddy)
+
+type: coding-agent
+
+invoke:
+  script: invoke.ps1
+  required_params:
+    - TaskFile
+    - OutputFile
+    - Workspace
+    - Mode
+  optional_params:
+    - Transport
+    - TimeoutSec
+    - GatewayUrl
+    - GatewayPassword
+    - SelfServe
+    - Model
+    - Structured
+
+supported_modes:
+  - execute
+  - review
+  - analyze
+
+capabilities:
+  filesystem_read: true
+  filesystem_write: true
+  shell: true
+  git: true
+  network: true
+
+input:
+  task_file: true
+  stdin: true
+
+output:
+  output_file: true
+  structured_output: true
+
+execution:
+  non_interactive: true
+  workspace_supported: true
+
+requirements:
+  - WorkBuddy desktop 5.6.2 (or newer) which ships the CodeBuddy Code CLI 2.147.0
+  - CLI entry: C:\Program Files\WorkBuddy\resources\app.asar.unpacked\cli\bin\codebuddy (alias cbc)
+  - Node.js (bundled: C:\Users\<user>\.workbuddy\binaries\node\versions\22.22.2-3\node.exe)
+  - A reachable CodeBuddy Code gateway (a live WorkBuddy session, -GatewayUrl, or -SelfServe)
+
+transports:
+  - id: runs
+    description: inject the task into an already-live agent session (POST /api/v1/runs)
+    status: working
+    constraint: the target session must be idle (writerOccupied=false)
+  - id: jobs
+    description: dispatch a fresh background agent (POST /api/v1/jobs)
+    status: unavailable-on-this-machine
+    constraint: spawned CLI processes have no usable credentials; job stays at "starting…"
+  - id: cli
+    description: spawn the CLI in non-interactive print mode (codebuddy -p --output-format json)
+    status: unavailable-on-this-machine
+    constraint: headless process cannot sign in ("Authentication required. Please use /login")
+
+notes:
+  - No permanent role is bound to this agent; the caller assigns brain/executor/reviewer/analyzer per task.
+  - review and analyze are enforced by prompt preamble, plus --disallowedTools Edit,Write,MultiEdit,NotebookEdit when the cli transport is used.
+  - Gateway auth uses a per-user Bearer password; the wrapper takes it from -GatewayPassword, $env:CODEBUDDY_GATEWAY_PASSWORD, or ~/.workbuddy/logs. -SelfServe starts a private gateway and reads the password from its stdout.
+  - network is a property of the agent's own toolset, not of this wrapper; outbound access depends on the local proxy configuration.
+  - MCP server mode is not available: the CLI only consumes MCP servers (--mcp-config), it cannot be exposed as one.

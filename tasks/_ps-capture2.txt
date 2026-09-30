@@ -1,0 +1,2 @@
+﻿[codebuddy] mode=execute status=failed native_exit=134 output=F:\AtoA\tasks\probe-result-fixed.md
+[codebuddy] failure: 原生 CLI 没有产出 result 记录（可能是前置错误 / 模型不可用 / 轮次耗尽 / 输出为空）。

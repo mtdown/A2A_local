@@ -1,0 +1,3 @@
+401 Authentication required. Please use /login command to sign in to your account (auth-type:custom-token,token-type:Bearer,token-length:21)
+
+Note: Environment variable CODEBUDDY_AUTH_TOKEN is set. If the key is invalid, unset it or set CODEBUDDY_API_KEY_DISABLED=1 to use /login instead. (target: https://www.workbuddy.cn) (01a0e7313a597a5c8ab3e80843689f33/01a0e731-3286-7650-8eba-24c20ae30f6d)

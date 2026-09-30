@@ -1,0 +1,3 @@
+仅回复这一行，不要做任何其他事情：
+
+A2A interface test passed.

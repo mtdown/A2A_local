@@ -1,0 +1,2 @@
+﻿[codebuddy] mode=execute status=failed native_exit=-1 output=F:\AtoA\tasks\probe-result.md
+[codebuddy] failure: 原生调用超时（超过 240 秒），进程已被强制终止。

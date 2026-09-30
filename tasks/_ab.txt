@@ -1,0 +1,5 @@
+[A-no-touch] touchEnv=False exit=0
+    stdout: NODE_OK v22.22.2 |
+[B-touch] touchEnv=True exit=134
+    stdout: 
+    stderr:  |   #  C:\Users\origin\.workbuddy\binaries\node\versions\22.22.2-3\node.exe[59740]: class std::shared_ptr<class node::InitializationResultImpl> __cdecl node::InitializeOncePerProcessInternal(const class std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char>

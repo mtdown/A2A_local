@@ -1,0 +1,6 @@
+# 脚本误生成的 Windows 系统缓存垃圾(2026-09-28 实验残留)
+%SystemDrive%/
+
+# 系统文件
+Thumbs.db
+desktop.ini

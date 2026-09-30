@@ -1,0 +1,8 @@
+﻿[19:44:39] args ok; workspace=F:\AtoA\tasks; task=31 chars
+[19:44:39] password candidates: 3
+[19:44:42] probe failed: http://127.0.0.1:18790 -> 无法连接到远程服务器
+[19:44:44] probe failed: http://127.0.0.1:18790 -> 无法连接到远程服务器
+[19:44:46] probe failed: http://127.0.0.1:18790 -> 无法连接到远程服务器
+[19:44:46] gateway resolved: http://127.0.0.1:17901 (cwd=C:\Users\origin\AppData\Local\Temp)
+[19:44:46] dispatch begin; transport=auto
+[19:45:03] dispatch kind: jobs run= job=bc467f33

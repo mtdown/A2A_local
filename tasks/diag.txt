@@ -1,0 +1,134 @@
+=== 相关环境变量（仅名字） ===
+CLAUDE_PROJECT_DIR
+CLAUDE_SESSION_ID
+CODEBUDDY_API_KEY_HELPER_DISABLED
+CODEBUDDY_BUILTIN_SKILLS_DIR
+CODEBUDDY_CODE_DISABLE_SESSION_SUMMARY
+CODEBUDDY_CODE_EXPERIMENTAL_AGENT_TEAMS
+CODEBUDDY_CODE_GIT_BASH_PATH
+CODEBUDDY_CODE_IMAGE_COMPRESSION_MAX_DIMENSION
+CODEBUDDY_CONFIG_DIR
+CODEBUDDY_CONVERSATION_MESSAGE_ID
+CODEBUDDY_CONVERSATION_REQUEST_ID
+CODEBUDDY_CURRENT_MODEL_ID
+CODEBUDDY_DISABLE_AUTO_MEMORY
+CODEBUDDY_DISABLE_BROWSER_MCP
+CODEBUDDY_DISABLE_CRON
+CODEBUDDY_DISABLE_EXTENDED_PLUGIN_HOOKS
+CODEBUDDY_DISABLE_FORK_SUBAGENT
+CODEBUDDY_DISABLE_IDE
+CODEBUDDY_DISABLE_REQUEST_VALIDATION
+CODEBUDDY_DISABLE_SESSION_HISTORY_CLEANUP
+CODEBUDDY_DISABLE_SYSTEM_REMINDER_MD
+CODEBUDDY_ENABLE_SECURITY_AUDIT
+CODEBUDDY_FORCE_HEADLESS_BUNDLE
+CODEBUDDY_FORCE_LITE_WB_BUNDLE
+CODEBUDDY_GATEWAY_AUTH
+CODEBUDDY_GATEWAY_DISABLE_API_DOCS
+CODEBUDDY_GATEWAY_PASSWORD
+CODEBUDDY_GIT_REPO_SCAN_DISABLED
+CODEBUDDY_HIGH_CREDIT_APPROVAL_ENABLED
+CODEBUDDY_HOST
+CODEBUDDY_HOST_CAPABILITIES
+CODEBUDDY_INCLUDE_TOPIC_MESSAGE
+CODEBUDDY_INTERNET_ENVIRONMENT
+CODEBUDDY_MCP_CONFIG
+CODEBUDDY_NODE_BIN
+CODEBUDDY_POWERSHELL_USE_PTY
+CODEBUDDY_PROJECT_DIR
+CODEBUDDY_PROMPT_SUGGESTION_DISABLED
+CODEBUDDY_QIMEI36
+CODEBUDDY_REASONING_ONLY_END_TURN
+CODEBUDDY_REPLAY_SHOW_PRE_COMPACT
+CODEBUDDY_SAFE_DELETE_BIN_DIR
+CODEBUDDY_SAFE_DELETE_BROKER_DELETE
+CODEBUDDY_SAFE_DELETE_BULK_GUARD
+CODEBUDDY_SAFE_DELETE_BULK_STATE_DIR
+CODEBUDDY_SAFE_DELETE_BULK_THRESHOLD
+CODEBUDDY_SAFE_DELETE_ENABLED
+CODEBUDDY_SAFE_DELETE_REPORT_PATH
+CODEBUDDY_SAFE_DELETE_SANDBOX
+CODEBUDDY_SERVICE_PROXY_URL
+CODEBUDDY_SESSION_ID
+CODEBUDDY_SKILL_DESC_MAX_OVERRIDES
+CODEBUDDY_SKILL_TOOL_CHAR_BUDGET
+CODEBUDDY_SKIP_GIT_BASH_CHECK
+CODEBUDDY_TOOL_CALL_ID
+WORKBUDDY_APPLICATION_NAME
+WORKBUDDY_APP_LIFETIME_JOB
+WORKBUDDY_APP_NAME
+WORKBUDDY_APP_PATH
+WORKBUDDY_APP_VERSION
+WORKBUDDY_CONFIG_DIR
+WORKBUDDY_DAEMON_CATALOG_STDIO
+WORKBUDDY_DATA_FOLDER_NAME
+WORKBUDDY_EXTRA_PATHS
+WORKBUDDY_FS_PROTECTION_ROLE
+WORKBUDDY_IS_PACKAGED
+WORKBUDDY_LOCALE
+WORKBUDDY_MENU_LOCALE
+WORKBUDDY_NODE_ENV
+WORKBUDDY_PAC_RPC_SOCKET
+WORKBUDDY_PAC_RPC_TOKEN
+WORKBUDDY_PRODUCT_NAME
+WORKBUDDY_PROMPT_TEMPLATES_DIR
+WORKBUDDY_RESOURCES_PATH
+WORKBUDDY_STARTUP_DATE
+WORKBUDDY_STARTUP_PID
+WORKBUDDY_STARTUP_TIME
+WORKBUDDY_USER_DATA_DIR
+
+=== 家目录下相关目录 ===
+drwxr-xr-x 1 origin 197121        0 Sep 22 19:18 .codebuddy
+drwxr-xr-x 1 origin 197121        0 Sep 28 14:22 .workbuddy
+drwxr-xr-x 1 origin 197121        0 Aug 27 15:21 .workbuddy-key-fallback
+drwxr-xr-x 1 origin 197121        0 Sep 28 12:44 WorkBuddy
+
+=== ~/.codebuddy 内容 ===
+total 70
+drwxr-xr-x 1 origin 197121   0 Sep 22 19:18 .
+drwxr-xr-x 1 origin 197121   0 Sep 28 14:22 ..
+drwxr-xr-x 1 origin 197121   0 Sep  4 17:54 diagnostics
+drwxr-xr-x 1 origin 197121   0 Sep 22 18:21 local_storage
+drwxr-xr-x 1 origin 197121   0 Sep 22 15:19 logs
+drwxr-xr-x 1 origin 197121   0 Sep 22 19:18 plugins
+drwxr-xr-x 1 origin 197121   0 Sep 22 18:33 projects
+drwxr-xr-x 1 origin 197121   0 Sep 22 19:18 sessions
+-rw-r--r-- 1 origin 197121 181 Sep 22 19:18 settings.json
+drwxr-xr-x 1 origin 197121   0 Sep 22 19:18 shell-snapshots
+drwxr-xr-x 1 origin 197121   0 Sep 22 19:18 traces
+-rw-r--r-- 1 origin 197121 129 Sep 22 19:18 user-state.json
+
+=== TEMP 下 codebuddy 相关 ===
+drwxr-xr-x 1 origin 197121         0 Sep 22 18:34 a2a-codebuddy-3b4be6aa4cfb47ba9dfc0297ae3fe7d0
+drwxr-xr-x 1 origin 197121         0 Sep 22 18:31 a2a-codebuddy-3c19ffc9332b48cbac62d76256a693ae
+drwxr-xr-x 1 origin 197121         0 Sep 22 18:33 a2a-codebuddy-40a429998a924db5b5b58f4e2054891d
+drwxr-xr-x 1 origin 197121         0 Sep 22 18:30 a2a-codebuddy-913035e2a47d407b89b89093e3d5c1a2
+drwxr-xr-x 1 origin 197121         0 Sep 22 18:53 a2a-codebuddy-9fa92b5cea7f45adbe78c353a4791882
+drwxr-xr-x 1 origin 197121         0 Sep 22 18:44 a2a-codebuddy-e0ffa4ce3832496d959044c93a159ff1
+drwxr-xr-x 1 origin 197121         0 Sep 22 18:31 a2a-codebuddy-f8c99dcc7b94448d99c486d2c24e94e0
+drwxr-xr-x 1 origin 197121         0 Sep 18 00:33 codebuddy-marketplace-install-0V9CD1
+drwxr-xr-x 1 origin 197121         0 Sep 22 18:22 codebuddy-marketplace-install-2kYSAX
+drwxr-xr-x 1 origin 197121         0 Sep 22 18:23 codebuddy-marketplace-install-AyDEhe
+drwxr-xr-x 1 origin 197121         0 Sep 22 19:18 codebuddy-marketplace-install-B4lEJV
+drwxr-xr-x 1 origin 197121         0 Sep 22 18:22 codebuddy-marketplace-install-KE5S7M
+drwxr-xr-x 1 origin 197121         0 Sep 18 00:33 codebuddy-marketplace-install-LxLtlQ
+drwxr-xr-x 1 origin 197121         0 Sep 22 18:26 codebuddy-marketplace-install-Ph0CJ3
+drwxr-xr-x 1 origin 197121         0 Sep 22 15:17 codebuddy-marketplace-install-SDQdDG
+drwxr-xr-x 1 origin 197121         0 Sep 18 00:33 codebuddy-marketplace-install-ZIwsi2
+drwxr-xr-x 1 origin 197121         0 Sep 22 18:23 codebuddy-marketplace-install-kDCXqH
+drwxr-xr-x 1 origin 197121         0 Sep 25 00:58 codebuddy-marketplace-install-ucbveq
+drwxr-xr-x 1 origin 197121         0 Sep 22 15:17 codebuddy-marketplace-update-xwoqai
+drwxr-xr-x 1 origin 197121         0 Sep 16 18:45 codebuddy-origin
+
+=== 运行中的 node.exe ===
+"ӳ������","PID","�Ự��      ","�Ự#   ","�ڴ�ʹ�� "
+"node.exe","44688","Console","1","33,144 K"
+"node.exe","37808","Console","1","33,280 K"
+"node.exe","20060","Console","1","33,896 K"
+"node.exe","53652","Console","1","33,832 K"
+"node.exe","12456","Console","1","33,932 K"
+"node.exe","36692","Console","1","33,872 K"
+"node.exe","21428","Console","1","33,940 K"
+"node.exe","37024","Console","1","33,876 K"
+"node.exe","17608","Console","1","33,940 K"
